@@ -1,0 +1,15 @@
+# Ignore CLion and CMake build folders
+.idea/
+cmake-build-*/
+
+# Ignore build artifacts
+*.o
+*.out
+*.exe
+*.a
+*.bin
+*.elf
+
+# Ignore other temp files
+*.log
+*.swp

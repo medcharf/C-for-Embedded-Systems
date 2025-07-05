@@ -1,0 +1,3 @@
+C:/Users/charf/Documents/GitHub/C-for-Embedded-Systems/cmake-build-debug/CMakeFiles/C_for_Embedded_Systems.dir
+C:/Users/charf/Documents/GitHub/C-for-Embedded-Systems/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/charf/Documents/GitHub/C-for-Embedded-Systems/cmake-build-debug/CMakeFiles/rebuild_cache.dir
