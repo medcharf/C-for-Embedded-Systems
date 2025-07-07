@@ -1,39 +1,43 @@
 Embedded C - Sensor Reading Simulation
 
-This code simulates reading a sensor through a 10-bit ADC, converting the raw value to voltage,
+This code simulates reading a sensor using a 10-bit ADC, converting the raw value to voltage,
 and returning the result using a struct. It's intended as an educational project to explore 
-embedded C concepts: data types, struct usage, constants, control flow, and safe string handling.
+core embedded C concepts: data types, struct usage, constants, control flow, and safe string handling.
 
 Included headers:
-- stdint.h: for fixed-width types like uint8_t, uint16_t.
+- stdint.h: for fixed-width types like uint8_t and uint16_t.
 - stdio.h: for printf (used for simulation output only, not for real embedded systems).
 
 Define vs Declaration:
 - #define is a preprocessor directive. It replaces all occurrences of a symbol with a value before compilation.
-- const is a typed constant stored in memory. It is safer, debuggable, and scoped.
+  It does not use memory like a variable declaration.
+- const is a typed constant stored in memory (or optimized out). It is safer, debuggable, scoped, and type-checked.
 
 Struct:
-The SensorReading struct is used to bundle related sensor information:
-  - raw_value: the ADC input value (0 to 1023)
-  - voltage: computed using a scale factor
+The SensorReading struct is used to group related sensor information:
+  - raw_value: the ADC input value (range: 0 to 1023)
+  - voltage: computed from the raw value using a scale factor
   - unit: a small char array to hold a string like "V"
 
 Function:
 read_sensor() accepts a uint16_t ADC value and returns a SensorReading struct.
-The unit string is manually set using 'V' and the null terminator '\0'.
+The unit string is manually set using 'V' followed by the null terminator '\0'.
 
 Null Terminator:
-C strings end with '\0'. Without it, printf or string functions may read garbage or crash.
+C strings must end with '\0'. Without it, printf or string-handling functions may read garbage or cause undefined behavior.
 
 main():
 - Demonstrates how to use the read_sensor() function.
-- Uses printf to simulate embedded output.
-- Includes if, for, while, and switch-case examples.
-- Simulates blinking an LED and handling a basic command code.
+- Uses printf to simulate output typically sent over UART in embedded systems.
+- Includes examples of if, for, while, and switch-case control structures.
+- Simulates LED blinking and basic command handling.
 
 Educational purpose:
-This code is meant to show how to handle basic embedded patterns cleanly:
+This code is designed to demonstrate how to implement common embedded C patterns cleanly using best practices:
 - Avoiding global state
-- Using typed constants
+- Using typed constants (const)
 - Managing memory safely
-- Practicing structure return and C flow control
+- Returning and handling structs
+- Practicing basic control flow in C
+
+Next step: Pointers and memory manipulation.
