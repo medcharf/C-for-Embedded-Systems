@@ -1,0 +1,39 @@
+Embedded C - Sensor Reading Simulation
+
+This code simulates reading a sensor through a 10-bit ADC, converting the raw value to voltage,
+and returning the result using a struct. It's intended as an educational project to explore 
+embedded C concepts: data types, struct usage, constants, control flow, and safe string handling.
+
+Included headers:
+- stdint.h: for fixed-width types like uint8_t, uint16_t.
+- stdio.h: for printf (used for simulation output only, not for real embedded systems).
+
+Define vs Declaration:
+- #define is a preprocessor directive. It replaces all occurrences of a symbol with a value before compilation.
+- const is a typed constant stored in memory. It is safer, debuggable, and scoped.
+
+Struct:
+The SensorReading struct is used to bundle related sensor information:
+  - raw_value: the ADC input value (0 to 1023)
+  - voltage: computed using a scale factor
+  - unit: a small char array to hold a string like "V"
+
+Function:
+read_sensor() accepts a uint16_t ADC value and returns a SensorReading struct.
+The unit string is manually set using 'V' and the null terminator '\0'.
+
+Null Terminator:
+C strings end with '\0'. Without it, printf or string functions may read garbage or crash.
+
+main():
+- Demonstrates how to use the read_sensor() function.
+- Uses printf to simulate embedded output.
+- Includes if, for, while, and switch-case examples.
+- Simulates blinking an LED and handling a basic command code.
+
+Educational purpose:
+This code is meant to show how to handle basic embedded patterns cleanly:
+- Avoiding global state
+- Using typed constants
+- Managing memory safely
+- Practicing structure return and C flow control
