@@ -5,6 +5,8 @@
   </component>
   <component name="BackendCodeEditorMiscSettings">
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
   </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
@@ -24,7 +26,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8e0fc1f-c542-4d40-b8ca-4483eb88ace8" name="Changes" comment="" />
+    <list default="true" id="f8e0fc1f-c542-4d40-b8ca-4483eb88ace8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,11 +100,6 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Pointers&amp;MemAccess.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="C_for_Embedded_Systems" TARGET_NAME="Pointers&amp;MemAccess.c" CONFIG_NAME="Pointers&amp;MemAccess.c">
       <option name="sourceFile" value="Pointers&amp;MemAccess\Pointers&amp;MemAccess.c" />
       <method v="2">
@@ -125,6 +124,10 @@
       <workItem from="1751875170615" duration="1188000" />
       <workItem from="1751910447029" duration="1684000" />
       <workItem from="1752046838511" duration="393000" />
+      <workItem from="1752047281439" duration="392000" />
+      <workItem from="1752047700330" duration="102000" />
+      <workItem from="1752047818364" duration="131000" />
+      <workItem from="1752048061918" duration="35000" />
     </task>
     <servers />
   </component>

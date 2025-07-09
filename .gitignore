@@ -1,0 +1,18 @@
+# Build folders
+cmake-build-*/
+build/
+
+# IDE files
+.idea/
+*.iml
+
+# Compiled outputs
+*.exe
+*.o
+*.a
+*.so
+*.dll
+
+# Temp files
+*.log
+*~
