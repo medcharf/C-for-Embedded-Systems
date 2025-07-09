@@ -1,34 +1,13 @@
 Embedded C - Pointer Basics and Memory Manipulation Simulation
-
 This code demonstrates fundamental pointer concepts in C, focusing on basic pointers, pointer arithmetic, volatile pointers, and a simulated memory-mapped I/O example. It aims to teach how pointers work in embedded systems for direct memory access and hardware interaction.
-
-Included headers:
-
-stdio.h: used for printf output in simulation.
-
-stdint.h: for fixed-width integer types like uint32_t.
-
 Key concepts:
-
 Basic pointer usage: declaring pointers, referencing variables, and dereferencing.
-
-Pointer arithmetic: accessing array elements through pointer increments.
-
-Volatile pointers: preventing compiler optimization for variables that can change unexpectedly.
-
+Pointer arithmetic: accessing array elements through pointer increments. arr[i];
+Volatile pointers: preventing compiler optimization for variables that can change unexpectedly (Sensor Readings for example).
 Memory-mapped I/O simulation: interacting with hardware registers through fixed memory addresses using volatile pointers (note: actual hardware access isn’t possible in this simulation).
-
 Functions:
-
 pointer_basics(): demonstrates basic pointer declaration and dereferencing.
-
 pointer_arithmetic(): shows how to traverse arrays using pointer arithmetic.
-
 volatile_pointer_example(): illustrates use of volatile pointers.
-
 memory_mapped_io_example(): simulates reading/writing to a hardware register.
-
-The main() function calls these demos sequentially, printing clear output to explain each concept.
-
-Educational purpose:
-Designed to help learners understand pointer manipulation essential for embedded C programming, especially when dealing with low-level memory and hardware control.
+Volatile pointers are generally used in embedded applications rather than in basic coding, when we need to ensure that the read value reflects real-time data and is not cached or optimized by the compiler.
