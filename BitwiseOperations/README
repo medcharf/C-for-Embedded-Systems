@@ -1,0 +1,37 @@
+# C – Understanding `static` Variables and Bitwise Operations
+
+This program demonstrates two important C programming concepts:  
+1. The difference between normal and `static` variables inside functions.  
+2. How to visualize and perform bitwise operations by printing binary representations of values.
+
+---
+
+## Key Concepts
+
+### Static Variables in Functions
+- In `incr(int adder)`, a local parameter is incremented and lost after the function ends.  
+- In `incr_static()`, the variable `static_incr` retains its value between function calls because it is declared with `static`.  
+- Static storage allows persistent values across function calls without using global variables.
+
+### Printing Binary Values without Static Buffers
+- The function `print_bits(uint8_t val, char *bitstring)` takes a value and a caller-provided buffer to store the binary string.  
+- This avoids using `static` inside the function, ensuring each call has its own independent buffer.  
+- The loop shifts each bit into the least significant position and masks with `& 1` to determine if it’s `0` or `1`.  
+- The resulting characters `'0'` or `'1'` are stored in the buffer, and the string is null-terminated.
+
+### Bitwise Operations Demonstrated
+- **AND (`&`)** – Each bit in the result is `1` only if both operands have a `1` in that position.  
+- **OR (`|`)** – Each bit in the result is `1` if at least one operand has a `1` in that position.  
+- **XOR (`^`)** – Each bit in the result is `1` if exactly one operand has a `1` in that position.  
+- **NOT (`~`)** – Inverts all bits in the operand (1 becomes 0, and 0 becomes 1).
+
+### Memory Safety Note
+By removing the `static` keyword from `print_bits` and passing a buffer from `main()`, this program avoids overwriting results when multiple binary strings are needed at the same time.
+
+---
+
+## Educational Purpose
+This program teaches:
+- The persistence of `static` variables versus normal locals.  
+- Safe handling of strings in C by using caller-provided buffers.  
+- The fundamental bitwise operators and how to display binary output for easier debugging and learning.
